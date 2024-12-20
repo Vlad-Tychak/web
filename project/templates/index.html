@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>web додаток</title>
+    </head>
+    <body>
+        <ul class="nav-menu">
+            <li>
+                <a href="{{ url_for('index') }}">Cписок лабораторних робіт</a>
+            </li>
+            <li>
+                <a href="{{ url_for('about_me') }}">Про мене</a>
+            </li>
+            <li>
+                <a  href="{{ url_for('contact') }}">Зворотній звязок</a>
+            </li>
+        </ul>
+
+        <section id="list-labs-conteiner">
+            <p id="text-labs">Список лабораторних</p>
+          <div id="list-of-labs">
+            <div id="lab">
+                <p id="text-lab">Лабораторна робота 1</p>
+                <span id="menu-inf-lab">
+                <a href="{{ url_for('lab1') }}" id="btn-run">запустити</a>
+                <a href="{{ url_for('lab1') }}" id="btn-more">більше інформації</a>
+                </span>
+            </div>
+            <br>
+            <div id="lab">
+                <p id="text-lab">Лабораторна робота 2</p>
+                <span id="menu-inf-lab">
+                    <a href="{{ url_for('lab2') }}" id="btn-run">запустити</a>
+                    <a href="{{ url_for('lab2') }}" id="btn-more">більше інформації</a>
+                </span>
+            </div>
+            <br>
+            <div id="lab">
+                <p id="text-lab">Лабораторна робота 3</p>
+                <span id="menu-inf-lab">
+                    <a href="{{ url_for('lab3') }}"id="btn-run">запустити</a>
+                    <a href="{{ url_for('lab3') }}" id="btn-more">більше інформації</a>
+                </span>
+            </div>
+            <br>
+            <div id="lab">
+                <p id="text-lab">Лабораторна робота 4</p>
+                <span id="menu-inf-lab">
+                    <a href="{{ url_for('lab4') }}" id="btn-run">запустити</a>
+                    <a href="{{ url_for('lab4') }}" id="btn-more">більше інформації</a>
+                </span>
+            </div>
+            <br>
+            <div id="lab">
+                <p id="text-lab">Лабораторна робота 5</p>
+                <span id="menu-inf-lab">
+                    <a href="{{ url_for('lab5') }}" id="btn-run">запустити</a>
+                    <a href="{{ url_for('lab5') }}" id="btn-more">більше інформації</a>
+                </span>
+            </div>
+            <br>
+            <div id="lab">
+                <p id="text-lab">Лабораторна робота 6</p>
+                <span id="menu-inf-lab">
+                    <a href="{{ url_for('lab6') }}" id="btn-run">запустити</a>
+                    <a href="{{ url_for('lab6') }}" id="btn-more">більше інформації</a>
+                </span>
+            </div>
+            <br>
+            <div id="lab">
+                <p id="text-lab">Лабораторна робота 7</p>
+                <span id="menu-inf-lab">
+                    <a href="{{ url_for('lab7_menu') }}" id="btn-run">запустити</a>
+                    <a href="{{ url_for('lab7_menu') }}" id="btn-more">більше інформації</a>
+                </span>
+            </div>
+          </div>
+        </section>
+        
+    </body>
+</html>

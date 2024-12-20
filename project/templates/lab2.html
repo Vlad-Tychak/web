@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>web додаток</title>
+    </head>
+    <body>
+        <ul class="nav-menu">
+            <li>
+                <a href="{{ url_for('index') }}">Cписок лабораторних робіт</a>
+            </li>
+            <li>
+                <a href="{{ url_for('about_me') }}">Про мене</a>
+            </li>
+            <li>
+                <a  href="{{ url_for('contact') }}">Зворотній звязок</a>
+            </li>
+        </ul>
+        <section id="conteiner-of-lab">
+    <h1>Лабораторна робота 2: Пошук елемента</h1>
+
+    <form method="POST">
+        <label for="searchElement">Введіть текст для пошуку:</label>
+        <input type="text" id="searchElement" name="searchElement" required>
+        <button type="submit">Пошук</button>
+    </form>
+
+    {% if result %}
+        <p>{{ result }}</p>
+    {% elif error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <div>
+        <h1>Опис</h1>
+        <p>завдання: Пошук елементу за значенням; 
+
+            Цей код шукає елемент у списку за допомогою функції poshuk_elementa, яка перевіряє, чи містить список elements елемент search_element. Ось як працює цей код:
+            Функція poshuk_elementa:
+            Приймає два параметри: список elements та елемент для пошуку search_element.
+            Використовує оператор in, щоб перевірити, чи є search_element в списку elements.
+            Якщо елемент знайдено, повертається рядок "Значення знайдено: {елемент}".
+            Якщо елемент не знайдено, повертається рядок "Значення не знайдено".
+            Основний код:
+            Створюється список elements, що містить рядки.
+            Користувач вводить значення через input(), яке передається в функцію poshuk_elementa. Перед передачею значення обрізається від зайвих пробілів за допомогою strip().
+            Результат пошуку виводиться на екран через print().</p>
+    </div>
+        </section>
+             
+    </body>
+</html>

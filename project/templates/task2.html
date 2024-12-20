@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>web додаток</title>
+    </head>
+    <body>
+        <ul class="nav-menu">
+            <li>
+                <a href="{{ url_for('index') }}">Cписок лабораторних робіт</a>
+            </li>
+            <li>
+                <a href="{{ url_for('about_me') }}">Про мене</a>
+            </li>
+            <li>
+                <a  href="{{ url_for('contact') }}">Зворотній звязок</a>
+            </li>
+        </ul>
+        <section id="conteiner-of-lab">
+    <h1>Завдання 2</h1>
+    <form method="POST">
+        <label for="akvariomA">Кількість рибок в акваріумі A:</label>
+        <input type="number" name="akvariomA" required>
+        <br>
+        <label for="akvariomB">Множник для акваріуму B:</label>
+        <input type="number" name="akvariomB" required>
+        <br>
+        <button type="submit">Розрахувати</button>
+    </form>
+
+    {% if result %}
+        <h2>Результат: {{ result }} рибок</h2>
+    {% elif error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+        </section>
+             
+    </body>
+</html>

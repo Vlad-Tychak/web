@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>web додаток</title>
+    </head>
+    <body>
+        <ul class="nav-menu">
+            <li>
+                <a href="{{ url_for('index') }}">Cписок лабораторних робіт</a>
+            </li>
+            <li>
+                <a href="{{ url_for('about_me') }}">Про мене</a>
+            </li>
+            <li>
+                <a  href="{{ url_for('contact') }}">Зворотній звязок</a>
+            </li>
+        </ul>
+
+        <section id="section-contacts">
+            <div id="information">
+                <p id="text-conection">Звязок</p>
+                <div>
+                    <p>Імя: Владислав</p>
+                    <p>Прізвище: Тимчак</p>
+                    <p>E-пошта: tymchak.vladyslav.clg@chnu.edu.ua</p>
+                    <p>номер телефону: 0952447025</p>
+                    </div>
+            </div>
+        </section>
+    </body>
+</html>

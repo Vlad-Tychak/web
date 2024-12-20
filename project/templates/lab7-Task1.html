@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    <title>Lab7 - Task 1</title>
+        <title>web додаток</title>
+    </head>
+    <body>
+        <ul class="nav-menu">
+            <li>
+                <a href="{{ url_for('index') }}">Cписок лабораторних робіт</a>
+            </li>
+            <li>
+                <a href="{{ url_for('about_me') }}">Про мене</a>
+            </li>
+            <li>
+                <a  href="{{ url_for('contact') }}">Зворотній звязок</a>
+            </li>
+        </ul>
+        <section id="conteiner-of-lab">
+        
+                <h1>Графік функції створено</h1>
+                <br>
+                <a href="{{ url_for('lab7_menu') }}">До меню Lab7</a>
+            
+        </section>
+             
+    </body>
+</html>

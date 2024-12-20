@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>web додаток</title>
+    </head>
+    <body>
+        <ul class="nav-menu">
+            <li>
+                <a href="{{ url_for('index') }}">Cписок лабораторних робіт</a>
+            </li>
+            <li>
+                <a href="{{ url_for('about_me') }}">Про мене</a>
+            </li>
+            <li>
+                <a  href="{{ url_for('contact') }}">Зворотній звязок</a>
+            </li>
+        </ul>
+        <section id="conteiner-of-lab">
+    <h1>Завдання 3</h1>
+    <form method="POST">
+        <label for="boxes">Кількість ящиків:</label>
+        <input type="number" name="boxes" required>
+        <br>
+        <label for="bananasPerBox">Кількість бананів (кг):</label>
+        <input type="number" name="bananasPerBox" required>
+        <br>
+        <label for="pricePerKg">Ціна за кг:</label>
+        <input type="number" name="pricePerKg" required>
+        <br>
+        <label for="overweight">Обваження (%):</label>
+        <input type="number" name="overweight" required>
+        <br>
+        <button type="submit">Розрахувати</button>
+    </form>
+
+    {% if penalty %}
+        <h2>Штраф: {{ penalty }} грн</h2>
+    {% elif error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+        </section>
+             
+    </body>
+</html>

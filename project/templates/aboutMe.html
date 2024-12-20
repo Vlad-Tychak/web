@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>web додаток</title>
+    </head>
+    <body>
+        <ul class="nav-menu">
+            <li>
+                <a href="{{ url_for('index') }}">Cписок лабораторних робіт</a>
+            </li>
+            <li>
+                <a href="{{ url_for('about_me') }}">Про мене</a>
+            </li>
+            <li>
+                <a  href="{{ url_for('contact') }}">Зворотній звязок</a>
+            </li>
+        </ul>
+        <section id="conteiner-of-biografy">
+            <div id="biografy">
+            <p id="text-b">Біографія:</p>
+            <p id="all-b">Я, Тимчак Владислав Станіславович народився 11 січня 2008 року,<br>
+               навчаюcя на спеціальності компютерна інженерія, цікавлюся програмуванням,<br>
+               знаю мови розмітки html та css, також володію мовами програмування javascript та Python </p>
+            </div>
+        </section>
+    </body>
+</html>

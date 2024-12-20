@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>web додаток</title>
+    </head>
+    <body>
+        <ul class="nav-menu">
+            <li>
+                <a href="{{ url_for('index') }}">Cписок лабораторних робіт</a>
+            </li>
+            <li>
+                <a href="{{ url_for('about_me') }}">Про мене</a>
+            </li>
+            <li>
+                <a  href="{{ url_for('contact') }}">Зворотній звязок</a>
+            </li>
+        </ul>
+        <section id="conteiner-of-lab">
+                <h1>Завдання 1</h1>
+                <form method="post">
+                    <label>Перше число:</label>
+                    <input type="number" name="num1" required>
+                    <label>Друге число:</label>
+                    <input type="number" name="num2" required>
+                    <button type="submit">Розрахувати</button>
+                </form>
+                {% if results %}
+                    <h2>Результати:</h2>
+                    <p>Додавання: {{ results['addition'] }}</p>
+                    <p>Віднімання: {{ results['subtraction'] }}</p>
+                    <p>Множення: {{ results['multiplication'] }}</p>
+                    <p>Ділення: {{ results['division'] }}</p>
+                {% elif error %}
+                    <p style="color:red;">{{ error }}</p>
+                {% endif %}
+            
+        </section>
+             
+    </body>
+</html>
